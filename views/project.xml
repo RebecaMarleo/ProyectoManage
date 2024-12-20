@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="vista_managerebeca_project_tree">
+            <field name="name">vista_managerebeca_project_tree</field>
+            <field name="model">managerebeca.project</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="vista_managerebeca_project_form">
+            <field name="name">vista_managerebeca_project_form</field>
+            <field name="model">managerebeca.project</field>
+            <field name="arch" type="xml">
+                <form string="formulario_project">
+                    <sheet>
+                        <group name="group_top">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="history_ids" />
+                            <field name="sprints_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="accion_managerebeca_project_form">
+            <field name="name">Listado de proyectos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">managerebeca.project</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Listado de proyectos
+                </p>
+                <p>Click <strong> 'Crear' </strong> para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+
+        <!-- actions -->
+
+        <menuitem name="Projects" id="menu_managerebeca_project" parent="menu_managerebeca_management"
+            action="accion_managerebeca_project_form" />
+
+    </data>
+</odoo>

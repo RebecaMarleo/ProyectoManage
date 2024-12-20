@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_managerebeca_technology,managerebeca.technology,model_managerebeca_technology,base.group_user,1,1,1,1
+access_managerebeca_project,managerebeca.project,model_managerebeca_project,base.group_user,1,1,1,1
+access_managerebeca_history,managerebeca.history,model_managerebeca_history,base.group_user,1,1,1,1
+access_managerebeca_sprint,managerebeca.sprint,model_managerebeca_sprint,base.group_user,1,1,1,1
+access_managerebeca_task,managerebeca.task,model_managerebeca_task,base.group_user,1,1,1,1

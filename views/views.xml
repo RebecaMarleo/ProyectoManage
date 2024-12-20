@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="managerebeca.list">
+      <field name="name">managerebeca list</field>
+      <field name="model">managerebeca.managerebeca</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="managerebeca.action_window">
+      <field name="name">managerebeca window</field>
+      <field name="res_model">managerebeca.managerebeca</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="managerebeca.action_server">
+      <field name="name">managerebeca server</field>
+      <field name="model_id" ref="model_managerebeca_managerebeca"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="managerebeca" id="managerebeca.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="managerebeca.menu_1" parent="managerebeca.menu_root"/>
+    <menuitem name="Menu 2" id="managerebeca.menu_2" parent="managerebeca.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="managerebeca.menu_1_list" parent="managerebeca.menu_1"
+              action="managerebeca.action_window"/>
+    <menuitem name="Server to list" id="managerebeca" parent="managerebeca.menu_2"
+              action="managerebeca.action_server"/>
+-->
+  </data>
+</odoo>
