@@ -6,8 +6,21 @@
             <field name="model">managerebeca.task</field>
             <field name="arch" type="xml">
                 <tree>
+                    <!-- campos de ampliación -->
+                    <field name="is_favorite" widget="boolean_favorite" nolabel="1" />
+                    <!-- FIN de campos de ampliación -->
                     <field name="name" />
                     <field name="description" />
+                    <!-- campos campos de ampliación -->
+                    <field name="progress" widget="progressbar" />
+                    <button name="f_finish_task" string="Finalizar" class="oe_highlight" type="object" />
+                    <button name="f_continue_task" string="Continuar" class="oe_highlight" type="object" />
+                    <field name="state"
+                        decoration-warning="state == 'paused'"
+                        decoration-success="state == 'finished'"
+                        decoration-muted="state == 'in_progress'"
+                        widget="badge" ></field>
+                    <!-- FIN de campos campos de ampliación -->
                 </tree>
             </field>
         </record>

@@ -6,8 +6,14 @@
             <field name="model">managerebeca.project</field>
             <field name="arch" type="xml">
                 <tree>
+                    <!-- campos de ampliación -->
+                    <field name="is_favorite" widget="boolean_favorite" nolabel="1" />
+                    <!-- FIN de campos de ampliación -->
                     <field name="name" />
                     <field name="description" />
+                    <!-- campos de ampliación -->
+                    <field name="progress" widget="progressbar" />
+                    <!-- FIN de campos de ampliación -->
                 </tree>
             </field>
         </record>
@@ -21,8 +27,8 @@
                         <group name="group_top">
                             <field name="name" />
                             <field name="description" />
-                            <field name="history_ids" />
-                            <field name="sprints_id" />
+                            <field name="histories_ids" />
+                            <field name="sprints_ids" />
                         </group>
                     </sheet>
                 </form>

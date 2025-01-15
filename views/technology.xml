@@ -6,6 +6,9 @@
             <field name="model">managerebeca.technology</field>
             <field name="arch" type="xml">
                 <tree>
+                    <!-- campos de ampliación -->
+                    <field name="is_favorite" widget="boolean_favorite" nolabel="1" />
+                    <!-- FIN de campos de ampliación -->
                     <field name="name" />
                     <field name="description" />
                 </tree>
